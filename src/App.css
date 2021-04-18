@@ -1,3 +1,11 @@
+/* Global Styles */
+
+:root {
+  --nav-primary-color: #e34234;
+  --nav-text-color: #ffffff;
+  --nav-a-hov-color: #333333;
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +42,135 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.product {
+  display: inline-block;
+  margin: 10px;
+}
+
+.home {
+  text-align: center;
+  border: 1px solid var(--nav-a-hov-color);
+  border-radius: 50px;
+  padding: 50px 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: var(--nav-a-hov-color);
+}
+
+a {
+  color: var(--nav-primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+/* Text Styles*/
+
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.bg-primary {
+  background: var(--nav-primary-color);
+  color: var(--nav-text-color);
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.9;
+  margin-bottom: 3rem;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: var(--nav-a-hov-color);
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  color: var(--nav-text-color);
+}
+
+/* Mobile Styles */
+
+@media (max-width: 700px) {
+  .hide-sm {
+    display: none;
+  }
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  /* Text Styles */
+  .x-large {
+    font-size: 3rem;
+  }
+  .large {
+    font-size: 2rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  /* Navbar */
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+  .navbar ul {
+    text-align: center;
+    justify-content: center;
   }
 }
